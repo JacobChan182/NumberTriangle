@@ -88,8 +88,24 @@ public class NumberTriangle {
      *
      */
     public int retrieve(String path) {
-        // TODO implement this method
-        return -1;
+        if(path.isEmpty()) {
+            return getRoot();
+        }
+        else if (path.equals("l")) {
+            if (left == null) {
+                return getRoot();
+            }
+            return left.retrieve(path);
+        }
+        else if (path.equals("r")) {
+            if (right == null) {
+                return getRoot();
+            }
+            return right.retrieve(path);
+        }
+        else {
+            throw new IllegalArgumentException("Invalid path");
+        }
     }
 
     /** Read in the NumberTriangle structure from a file.
@@ -111,6 +127,9 @@ public class NumberTriangle {
 
 
         // TODO define any variables that you want to use to store things
+        int root;
+
+
 
         // will need to return the top of the NumberTriangle,
         // so might want a variable for that.
