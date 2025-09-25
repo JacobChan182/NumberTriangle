@@ -11,8 +11,25 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;JacobChan182&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/JacobChan182/NumberTriangle.git&quot;,
+    &quot;accountId&quot;: &quot;f3b1d3bd-79d2-476e-8ca3-babd2c7094db&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -24,10 +41,12 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.NumberTriangle.executor": "Run",
+    "JUnit.NumberTriangleTest.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "NumberTriangle",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -54,6 +73,8 @@
       <updated>1758769475709</updated>
       <workItem from="1758769477035" duration="1142000" />
       <workItem from="1758770627811" duration="211000" />
+      <workItem from="1758771006508" duration="648000" />
+      <workItem from="1758771670441" duration="3545000" />
     </task>
     <servers />
   </component>
