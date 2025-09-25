@@ -1,4 +1,6 @@
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * This is the provided NumberTriangle class to be used in this coding task.
@@ -91,17 +93,19 @@ public class NumberTriangle {
         if(path.isEmpty()) {
             return getRoot();
         }
-        else if (path.equals("l")) {
+        char firstLetter = path.charAt(0);
+        String rest = path.substring(1);
+        if (firstLetter == 'l') {
             if (left == null) {
                 return getRoot();
             }
-            return left.retrieve(path);
+            return left.retrieve(rest);
         }
-        else if (path.equals("r")) {
+        else if (firstLetter == 'r') {
             if (right == null) {
                 return getRoot();
             }
-            return right.retrieve(path);
+            return right.retrieve(rest);
         }
         else {
             throw new IllegalArgumentException("Invalid path");
@@ -127,8 +131,7 @@ public class NumberTriangle {
 
 
         // TODO define any variables that you want to use to store things
-        int root;
-
+        List<List<NumberTriangle>> triangle = new ArrayList<>();
 
 
         // will need to return the top of the NumberTriangle,
@@ -138,10 +141,29 @@ public class NumberTriangle {
         String line = br.readLine();
         while (line != null) {
 
-            // remove when done; this line is included so running starter code prints the contents of the file
-            System.out.println(line);
-
             // TODO process the line
+            String[] numbers = line.trim().split(" ");
+            ArrayList<NumberTriangle> row = new ArrayList<>();
+            for (String num : numbers) {
+                int value = Integer.parseInt(num);
+                NumberTriangle node = new NumberTriangle(value);
+                row.add(node);
+            }
+
+            if (!triangle.isEmpty()) {
+                List<NumberTriangle> prevRow = triangle.get(triangle.size() - 1);
+                for (int i = 0; i < prevRow.size(); i++) {
+                    NumberTriangle parent = prevRow.get(i);
+                    parent.setLeft(row.get(i));
+                    parent.setRight(row.get(i + 1));
+                }
+            }
+
+            triangle.add(row);
+
+            if (top == null) {
+                top = row.get(0);
+            }
 
             //read the next line
             line = br.readLine();
